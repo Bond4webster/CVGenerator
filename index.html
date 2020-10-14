@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>CV generator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">
+                <h1>Резюме</h1>
+            </div>
+            <div class="mainInfo">
+                <div class="textInfo">
+                    <div class="group" id="fio">
+                        <input type="text" required  onchange="isCorrectFIO()">
+                        <span class="bar"></span>
+                        <label class="labelInfo">ФИО</label>
+                    </div>
+                    <div class="group" id="year">
+                        <input type="number" required  onchange="isCorrectYear()">
+                        <span class="bar"></span>
+                        <label class="labelInfo">Год рождения</label>
+                    </div>
+                    <div class="group" id="phone">
+                        <input type="number" required  onchange="isCorrectPhone()">
+                        <span class="bar"></span>
+                        <label class="labelInfo">Телефон</label>
+                    </div>
+                    <div class="group" id="email">
+                        <input type="text" required onchange="isCorrectEmail()">
+                        <span class="bar"></span>
+                        <label class="labelInfo">Почта</label>
+                    </div>
+                </div>
+                <div class="photo">
+                    <label class="label">
+                        <span class="title">Добавить фото</span>
+                        <input type="file" accept="image/*" id="photo-upload" required>
+                    </label>
+
+                </div>
+            </div>
+            <div class="containerCard">
+                <div class="card">
+                    <div class="headerCard">
+                        <p>Хобби</p>
+                        <input type="text" placeholder="Введите заголовок" id="inputHeaderHobby" class="inputHeader">
+                    </div>
+                    <div class="cardInfo">
+
+                        <ul id="hobbyList">
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="headerCard">
+                        <p>Навыки</p>
+                        <input type="text" placeholder="Введите заголовок" id="inputHeaderSkills" class="inputHeader">
+                    </div>
+                    <div class="cardInfo">
+                        <ul id="skillsList">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+                <button class="saveBtn" onclick="saveCV()">Сохранить</button>
+            </div>
+
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
